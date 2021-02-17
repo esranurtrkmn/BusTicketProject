@@ -1,0 +1,768 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47F3D022-7FAC-4633-BB21-7EA9EA4A1A30}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BiletOto</RootNamespace>
+    <AssemblyName>BiletOto</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.7</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="ApplicationInsights.config" />
+    <Content Include="bin\BiletOtomasyon.dll.config" />
+    <Content Include="bin\EntityFramework.dll.refresh" />
+    <Content Include="bin\EntityFramework.SqlServer.dll.refresh" />
+    <Content Include="bin\Microsoft.AspNet.Web.Optimization.WebForms.dll.refresh" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll.refresh" />
+    <Content Include="bin\Newtonsoft.Json.dll.refresh" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.exe.refresh" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.exe.refresh" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll.refresh" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll.refresh" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll.refresh" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll.refresh" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll.refresh" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll.refresh" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll.refresh" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll.refresh" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Win32.Primitives.dll.refresh" />
+    <Content Include="bin\roslyn\System.AppContext.dll.refresh" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll.refresh" />
+    <Content Include="bin\roslyn\System.Console.dll.refresh" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll.refresh" />
+    <Content Include="bin\roslyn\System.Diagnostics.Process.dll.refresh" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll.refresh" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll.refresh" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll.refresh" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.DriveInfo.dll.refresh" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll.refresh" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll.refresh" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll.refresh" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll.refresh" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll.refresh" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll.refresh" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll.refresh" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll.refresh" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll.refresh" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll.refresh" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll.refresh" />
+    <Content Include="bin\roslyn\System.Threading.Thread.dll.refresh" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll.refresh" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll.refresh" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll.refresh" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll.refresh" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll.refresh" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.exe.refresh" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.refresh" />
+    <Content Include="bin\System.Web.Optimization.dll.refresh" />
+    <Content Include="bin\System.Web.Providers.dll.refresh" />
+    <Content Include="bin\TicketAutomation.dll.config" />
+    <Content Include="bin\WebGrease.dll.refresh" />
+    <Content Include="Bundle.config" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\package.json" />
+    <Content Include="Content\sass\mdb.scss" />
+    <Content Include="Content\sass\mdb\free\data\_colors.scss" />
+    <Content Include="Content\sass\mdb\free\data\_functions.scss" />
+    <Content Include="Content\sass\mdb\free\data\_mixins.scss" />
+    <Content Include="Content\sass\mdb\free\data\_prefixer.scss" />
+    <Content Include="Content\sass\mdb\free\data\_variables-b4.scss" />
+    <Content Include="Content\sass\mdb\free\data\_variables.scss" />
+    <Content Include="Content\sass\mdb\free\_animations.scss" />
+    <Content Include="Content\sass\mdb\free\_badge.scss" />
+    <Content Include="Content\sass\mdb\free\_breadcrumb.scss" />
+    <Content Include="Content\sass\mdb\free\_buttons.scss" />
+    <Content Include="Content\sass\mdb\free\_cards-basic.scss" />
+    <Content Include="Content\sass\mdb\free\_carousel-basic.scss" />
+    <Content Include="Content\sass\mdb\free\_collapse.scss" />
+    <Content Include="Content\sass\mdb\free\_deprecated.scss" />
+    <Content Include="Content\sass\mdb\free\_dropdowns.scss" />
+    <Content Include="Content\sass\mdb\free\_footer.scss" />
+    <Content Include="Content\sass\mdb\free\_forms-basic.scss" />
+    <Content Include="Content\sass\mdb\free\_global.scss" />
+    <Content Include="Content\sass\mdb\free\_helpers.scss" />
+    <Content Include="Content\sass\mdb\free\_jumbotron.scss" />
+    <Content Include="Content\sass\mdb\free\_list-group.scss" />
+    <Content Include="Content\sass\mdb\free\_masks.scss" />
+    <Content Include="Content\sass\mdb\free\_modals.scss" />
+    <Content Include="Content\sass\mdb\free\_msc.scss" />
+    <Content Include="Content\sass\mdb\free\_navbar.scss" />
+    <Content Include="Content\sass\mdb\free\_pagination.scss" />
+    <Content Include="Content\sass\mdb\free\_progress.scss" />
+    <Content Include="Content\sass\mdb\free\_tables.scss" />
+    <Content Include="Content\sass\mdb\free\_typography.scss" />
+    <Content Include="Content\sass\mdb\free\_waves.scss" />
+    <Content Include="Content\sass\mdb\_custom.scss" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="main.Master" />
+    <Content Include="obj\Debug\BiletOtomasyon.csproj.CopyComplete" />
+    <Content Include="obj\Debug\BiletOtomasyon.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\BiletOtomasyon.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\TicketAutomation.csproj.CopyComplete" />
+    <Content Include="obj\Debug\TicketAutomation.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\TicketAutomation.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Debug\Tsc.out" />
+    <Content Include="obj\Release\BiletOtomasyon.csproj.CoreCompileInputs.cache" />
+    <Content Include="Personel\Personel.Master" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\BiletDuzenle.aspx" />
+    <Content Include="Admin\BiletEkle.aspx" />
+    <Content Include="Admin\Biletler.aspx" />
+    <Content Include="Admin\BiletSil.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\FiyatEkle.aspx" />
+    <Content Include="Admin\Fiyatlar.aspx" />
+    <Content Include="Admin\Giris.aspx" />
+    <Content Include="Admin\GuzergahEkle.aspx" />
+    <Content Include="Admin\Guzergahlar.aspx" />
+    <Content Include="Admin\GuzergahTerminal.aspx" />
+    <Content Include="Admin\KullaniciEkle.aspx" />
+    <Content Include="Admin\Kullanicilar.aspx" />
+    <Content Include="Admin\MuaveSof.aspx" />
+    <Content Include="Admin\MuavinAtama.aspx" />
+    <Content Include="Admin\MuavinEkle.aspx" />
+    <Content Include="Admin\OtobusEkle.aspx" />
+    <Content Include="Admin\Otobusler.aspx" />
+    <Content Include="Admin\Raporlar.aspx" />
+    <Content Include="Admin\SeferEkle.aspx" />
+    <Content Include="Admin\Seferler.aspx" />
+    <Content Include="Admin\SoforAtama.aspx" />
+    <Content Include="Admin\SoforEkle.aspx" />
+    <Content Include="Admin\TerminalEkle.aspx" />
+    <Content Include="Admin\Terminaller.aspx" />
+    <Content Include="BiletOtomasyon.csproj" />
+    <Content Include="BiletSecim.aspx" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\BiletOtomasyon.dll" />
+    <Content Include="bin\BiletOtomasyon.pdb" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.dll" />
+    <Content Include="bin\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.Process.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.DriveInfo.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.Threading.Thread.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Providers.dll" />
+    <Content Include="bin\System.Web.Providers.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\TicketAutomation.dll" />
+    <Content Include="bin\TicketAutomation.pdb" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="Content\animate.min.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\demo.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\AUTHORS.txt" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\external\jquery\jquery.js" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\index.html" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\jquery-ui.css" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\jquery-ui.js" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\jquery-ui.min.css" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\jquery-ui.min.js" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\jquery-ui.structure.css" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\jquery-ui.structure.min.css" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\jquery-ui.theme.css" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\jquery-ui.theme.min.css" />
+    <Content Include="Content\jquery-ui-1.12.1.custom\LICENSE.txt" />
+    <Content Include="Content\light-bootstrap-dashboard.css" />
+    <Content Include="Content\mdb.css" />
+    <Content Include="Content\mdb.min.css" />
+    <Content Include="Content\pe-icon-7-stroke.css" />
+    <Content Include="Content\sass\README.txt" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="Giris.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="img\bodybg1.jpg" />
+    <Content Include="img\bodybg2.jpg" />
+    <Content Include="img\bodybg3.jpg" />
+    <Content Include="img\bodybg4.jpg" />
+    <Content Include="img\bodybg5.jpg" />
+    <Content Include="img\calendar.png" />
+    <Content Include="img\default-avatar.png" />
+    <Content Include="img\faces\face-0.jpg" />
+    <Content Include="img\faces\face-1.jpg" />
+    <Content Include="img\faces\face-2.jpg" />
+    <Content Include="img\faces\face-3.jpg" />
+    <Content Include="img\faces\face-4.jpg" />
+    <Content Include="img\faces\face-5.jpg" />
+    <Content Include="img\faces\face-6.jpg" />
+    <Content Include="img\faces\face-7.jpg" />
+    <Content Include="img\faces\tim_vector.jpe" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\loading-bubbles.svg" />
+    <Content Include="img\logo1.jpg" />
+    <Content Include="img\logo3.png" />
+    <Content Include="img\logo4.png" />
+    <Content Include="img\mask.png" />
+    <Content Include="img\new_logo.png" />
+    <Content Include="img\sidebar-1.jpg" />
+    <Content Include="img\sidebar-2.jpg" />
+    <Content Include="img\sidebar-3.jpg" />
+    <Content Include="img\sidebar-4.jpg" />
+    <Content Include="img\sidebar-5.jpg" />
+    <Content Include="img\tim_80x80.png" />
+    <Content Include="obj\Debug\BiletOtomasyon.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\BiletOtomasyon.dll" />
+    <Content Include="obj\Debug\BiletOtomasyon.pdb" />
+    <Content Include="obj\Debug\TicketAutomation.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TicketAutomation.dll" />
+    <Content Include="obj\Debug\TicketAutomation.pdb" />
+    <Content Include="Personel\Default.aspx" />
+    <Content Include="Scripts\bootstrap-checkbox-radio-switch.js" />
+    <Content Include="Scripts\bootstrap-notify.js" />
+    <Content Include="Scripts\bootstrap-select.js" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\chartist.min.js" />
+    <Content Include="Scripts\demo.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\light-bootstrap-dashboard.js" />
+    <Content Include="Scripts\mdb.js" />
+    <Content Include="Scripts\mdb.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Seferler.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BiletDuzenle.aspx.cs">
+      <DependentUpon>BiletDuzenle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BiletDuzenle.aspx.designer.cs">
+      <DependentUpon>BiletDuzenle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BiletEkle.aspx.cs">
+      <DependentUpon>BiletEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BiletEkle.aspx.designer.cs">
+      <DependentUpon>BiletEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Biletler.aspx.cs">
+      <DependentUpon>Biletler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Biletler.aspx.designer.cs">
+      <DependentUpon>Biletler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BiletSil.aspx.cs">
+      <DependentUpon>BiletSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BiletSil.aspx.designer.cs">
+      <DependentUpon>BiletSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FiyatEkle.aspx.cs">
+      <DependentUpon>FiyatEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FiyatEkle.aspx.designer.cs">
+      <DependentUpon>FiyatEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Fiyatlar.aspx.cs">
+      <DependentUpon>Fiyatlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Fiyatlar.aspx.designer.cs">
+      <DependentUpon>Fiyatlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Giris.aspx.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Giris.aspx.designer.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GuzergahEkle.aspx.cs">
+      <DependentUpon>GuzergahEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GuzergahEkle.aspx.designer.cs">
+      <DependentUpon>GuzergahEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Guzergahlar.aspx.cs">
+      <DependentUpon>Guzergahlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Guzergahlar.aspx.designer.cs">
+      <DependentUpon>Guzergahlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GuzergahTerminal.aspx.cs">
+      <DependentUpon>GuzergahTerminal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GuzergahTerminal.aspx.designer.cs">
+      <DependentUpon>GuzergahTerminal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\KullaniciEkle.aspx.cs">
+      <DependentUpon>KullaniciEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\KullaniciEkle.aspx.designer.cs">
+      <DependentUpon>KullaniciEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kullanicilar.aspx.cs">
+      <DependentUpon>Kullanicilar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kullanicilar.aspx.designer.cs">
+      <DependentUpon>Kullanicilar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MuaveSof.aspx.cs">
+      <DependentUpon>MuaveSof.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MuaveSof.aspx.designer.cs">
+      <DependentUpon>MuaveSof.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MuavinAtama.aspx.cs">
+      <DependentUpon>MuavinAtama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MuavinAtama.aspx.designer.cs">
+      <DependentUpon>MuavinAtama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MuavinEkle.aspx.cs">
+      <DependentUpon>MuavinEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MuavinEkle.aspx.designer.cs">
+      <DependentUpon>MuavinEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OtobusEkle.aspx.cs">
+      <DependentUpon>OtobusEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OtobusEkle.aspx.designer.cs">
+      <DependentUpon>OtobusEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Otobusler.aspx.cs">
+      <DependentUpon>Otobusler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Otobusler.aspx.designer.cs">
+      <DependentUpon>Otobusler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Raporlar.aspx.cs">
+      <DependentUpon>Raporlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Raporlar.aspx.designer.cs">
+      <DependentUpon>Raporlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SeferEkle.aspx.cs">
+      <DependentUpon>SeferEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SeferEkle.aspx.designer.cs">
+      <DependentUpon>SeferEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Seferler.aspx.cs">
+      <DependentUpon>Seferler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Seferler.aspx.designer.cs">
+      <DependentUpon>Seferler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SoforAtama.aspx.cs">
+      <DependentUpon>SoforAtama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SoforAtama.aspx.designer.cs">
+      <DependentUpon>SoforAtama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SoforEkle.aspx.cs">
+      <DependentUpon>SoforEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SoforEkle.aspx.designer.cs">
+      <DependentUpon>SoforEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TerminalEkle.aspx.cs">
+      <DependentUpon>TerminalEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TerminalEkle.aspx.designer.cs">
+      <DependentUpon>TerminalEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Terminaller.aspx.cs">
+      <DependentUpon>Terminaller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Terminaller.aspx.designer.cs">
+      <DependentUpon>Terminaller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BiletSecim.aspx.cs">
+      <DependentUpon>BiletSecim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BiletSecim.aspx.designer.cs">
+      <DependentUpon>BiletSecim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Giris.aspx.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Giris.aspx.designer.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="main.Master.cs">
+      <DependentUpon>main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.Master.designer.cs">
+      <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personel\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Personel.Master.cs">
+      <DependentUpon>Personel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personel\Personel.Master.designer.cs">
+      <DependentUpon>Personel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seferler.aspx.cs">
+      <DependentUpon>Seferler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seferler.aspx.designer.cs">
+      <DependentUpon>Seferler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VeriTabani.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50495</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50495/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

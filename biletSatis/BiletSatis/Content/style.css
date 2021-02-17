@@ -1,0 +1,10 @@
+/* YOUR CUSTOM STYLES */
+
+.size18 td {
+    font-size: 18px !important;
+    font-weight: 200;
+}
+.size10 td {
+    font-size: 10px !important;
+    font-weight: 200;
+}

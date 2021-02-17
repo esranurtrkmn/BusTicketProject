@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="BiletOtomasyon.main" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Mavi Turizm</title>
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/mdb.min.css" rel="stylesheet" />
+    <link href="Content/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet" />
+    <link href="Content/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background: url(img/bodybg4.jpg) no-repeat;">
+    <form runat="server">
+        <nav class="nav icon-set">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li class="facebook"><a href="#" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="twitter"><a href="#" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="instagram"><a href="#" data-toggle="tooltip" title="Instagram"><i class="fa fa-instagram fa-lg"></i></a></li>
+                    <li class="linkedin"><a href="#" data-toggle="tooltip" title="LinkedIn"><i class="fa fa-linkedin fa-lg"></i></a></li>
+                    <li style="margin-left: 800px;"><a href="Giris.aspx">Personel Giriş <span class="fa fa-arrow-circle-o-right"></span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <!-- Topper w/ logo -->
+            <div class="row hidden-xs topper" style="padding:2%;">
+                <div class="col-xs-6 col-sm-9">
+                    <a href="Default.aspx">
+                        <img src="img/logo1.jpg" class="img-responsive" width="1080" height="200"></a>
+                </div>
+                <div class="col-xs-5 col-xs-offset-1 col-sm-3 col-sm-offset-0 text-right ">
+                    <h3 style="color:white;"><b>Hızlı Destek<br />
+                        <i>+90 (555) 444 33 22</i></b></h3>
+                </div>
+            </div>
+            <!-- End Topper -->
+            <!-- Navigation -->
+            <div class="row">
+                <nav class="navbar navbar-default text-uppercase" style="font-family: Corbel; font-size: larger; font-weight: bold; border: 0px;" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand visible-xs-inline-block nav-logo" href="/">
+                                <img src="img/logo1.jpg" class="img-responsive" alt="" /></a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Anasayfa</a></li>
+                                <li><a href="#">E-Bilet</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seyehat Bilgileri <b class="caret"></b></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Satış Ofisleri</a></li>
+                                        <li><a href="#">Sıkça Sorulan Sorular</a></li>
+                                        <li><a href="#">Yolcu Hakları</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kurumsal Bilgiler <b class="caret"></b></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Mavi Turizm</a></li>
+                                        <li><a href="#">Yönetim Kurulu</a></li>
+                                        <li><a href="#">Basın</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">İletişim</a></li>
+                                <li><a href="#">Destek</a></li>
+                                <li class="visible-xs-block"><a href="#">Gizli</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <footer>
+            <div class="footer" id="footer">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <h3>Seyahat Bilgileri </h3>
+                            <ul>
+                                <li><a href="#">Satış Ofisleri </a></li>
+                                <li><a href="#">Sıkça Sorulan Sorular </a></li>
+                                <li><a href="#">Yolcu Hakları </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Kurumsal Bilgiler </h3>
+                            <ul>
+                                <li><a href="#">Mavi Turizm </a></li>
+                                <li><a href="#">Yönetim Kurulu </a></li>
+                                <li><a href="#">Basın </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>İletişim </h3>
+                            <ul>
+                                <li><a href="#">Destek Hattı </a></li>
+                                <li><a href="#">Şikayet/Öneri </a></li>
+                                <li><a href="#">Online Destek </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </div>
+            <!--/.footer-->
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="pull-left">Tüm hakkı saklıdır. © Mavi Turizm Seyahat Organizasyon ve Ticaret A.Ş. 2017</p>
+                    <div class="pull-right">
+                        <ul class="nav nav-pills payments">
+                            <li><i class="fa fa-cc-visa"></i></li>
+                            <li><i class="fa fa-cc-mastercard"></i></li>
+                            <li><i class="fa fa-cc-amex"></i></li>
+                            <li><i class="fa fa-cc-paypal"></i></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--/.footer-bottom-->
+        </footer>
+    </form>
+    <script src="Scripts/jquery-3.2.1.min.js"></script>
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+
+    <script src="Scripts/mdb.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/respond.min.js"></script>
+    <script src="Content/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#txtGidis").datepicker({
+
+                dateFormat: "dd.mm.yy",
+                monthNames: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+                dayNamesMin: ["Pzr", "Pts", "Sl", "Çrş", "Prş", "Cm", "Cts"]
+            });
+            $("#txtDonus").datepicker({
+                dateFormat: "dd.mm.yy",
+                monthNames: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+                dayNamesMin: ["Pzr", "Pts", "Sl", "Çrş", "Prş", "Cm", "Cts"]
+            });
+        });
+    </script>
+</body>
+</html>
